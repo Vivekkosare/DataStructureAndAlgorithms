@@ -1,0 +1,24 @@
+{
+  "name": "datastructureandalgorithm",
+  "version": "1.0.0",
+  "description": "data structure and algorithms",
+  "main": "app.js",
+  "dependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vivekkosare/DataStructureAndAlgorithms.git"
+  },
+  "author": "Vivek Kosare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vivekkosare/DataStructureAndAlgorithms/issues"
+  },
+  "homepage": "https://github.com/Vivekkosare/DataStructureAndAlgorithms#readme"
+}
