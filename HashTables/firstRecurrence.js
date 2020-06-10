@@ -1,9 +1,11 @@
 function firstRecurrence(input){
+    const time = Date.now();
     for (let i = 0; i < input.length; i++) {
         for (let j = i+1; j < input.length; j++) {
             if(input[i]==input[j])
             {
                 console.log('Recurring element: ',input[i]);
+                console.log('TIme elapsed: ',(Date.now()-time));
                 return input[i];
             }
             
@@ -14,11 +16,14 @@ function firstRecurrence(input){
 
 function firstRecurrenceByHash(input){
     let map = {};
+    const time = Date.now();
     for (let i = 0; i < input.length; i++) {
         console.log(map[input[i]]);
         if(map[input[i]] != undefined)
         {
             console.log('recurring by hash: value =', input[i],', index= ', i);
+            const finalTime = Date.now();
+            console.log('total time: ',(Date.now()-time));
             return input[i];
         }
         else
