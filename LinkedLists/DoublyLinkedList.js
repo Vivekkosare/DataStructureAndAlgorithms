@@ -2,13 +2,15 @@ class Node{
     constructor(value){
         this.value = value;
         this.next = null;
+        this.prev = null;
     }
 }
-class SinglyLinkedList{
+class DoublyLinkedList{
     constructor(value){
         this.head = {
             value: value,
-            next: null
+            next: null,
+            prev: null
         }
         this.tail = this.head;
         this.length = 1;
@@ -17,6 +19,7 @@ class SinglyLinkedList{
     //O(1)
     append(value){
         const newNode = new Node(value);
+        newNode.prev = this.tail;
         this.tail.next = newNode;
         this.tail = newNode;
         this.length++;
@@ -89,14 +92,15 @@ class SinglyLinkedList{
     } //O(n)
 }
 
-const linkedList = new SinglyLinkedList(10);
+const linkedList = new DoublyLinkedList(10);
 linkedList.append(4);
 linkedList.append(17);
-linkedList.prepend(18);
-linkedList.printList();
-//console.log(linkedList);
-linkedList.insert(1,29);
-linkedList.printList();
-linkedList.remove(2);
-linkedList.printList();
-//console.log(linkedList.printList());
+console.log(linkedList);
+// linkedList.prepend(18);
+// linkedList.printList();
+// //console.log(linkedList);
+// linkedList.insert(1,29);
+// linkedList.printList();
+// linkedList.remove(2);
+// linkedList.printList();
+// //console.log(linkedList.printList());
