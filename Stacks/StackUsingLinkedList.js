@@ -11,7 +11,8 @@ class Stack{
         this.length = 0;
     }
 
-    peep(){
+    peek(){
+        console.log(this.top);
         return this.top;
     }
     
@@ -29,9 +30,27 @@ class Stack{
         this.length++;
         return this;
     }
+
+    pop(){
+        if(!this.top){
+            return null;
+        }
+        if(this.top === this.bottom)
+        {
+            this.bottom = null;
+        }
+        const holdingPointer = this.top;
+        this.top = this.top.next;
+        this.length--;
+        return this;
+    }
 }
 
 const stack = new Stack();
 stack.push('Google');
 stack.push('Udemy');
+console.log(stack);
+stack.peek();
+stack.pop();
+stack.pop();
 console.log(stack);

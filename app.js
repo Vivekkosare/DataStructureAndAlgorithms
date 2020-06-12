@@ -6,4 +6,6 @@
 
 //const doublyLinkedList = require('./LinkedLists/DoublyLinkedList');
 
-const stack = require('./Stacks/Stack');
+//const stack = require('./Stacks/StackUsingLinkedList');
+
+const stack = require('./Stacks/StackUsingArrays');
